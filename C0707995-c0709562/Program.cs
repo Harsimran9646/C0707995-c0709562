@@ -27,7 +27,10 @@ namespace C0707995_c0709562
 
         public double Balance
         {
-            get { return m_balance; }
+            get
+            {
+                return m_balance;
+            }
 
         }
 
@@ -49,7 +52,7 @@ namespace C0707995_c0709562
                 throw new ArgumentOutOfRangeException("amount");
 
             }
-            m_balance += amount;
+            m_balance -= amount;
 
         }
         public void Credit(double amount)
@@ -80,8 +83,9 @@ namespace C0707995_c0709562
 
             ba.Credit(5.77);
             ba.Debit(11.22);
-           
+
             Console.WriteLine("Current balance is $ {0}", ba.Balance);
         }
+    }
     }
 }
